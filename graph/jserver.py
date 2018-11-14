@@ -13,17 +13,17 @@ from bsonrpc.framing import JSONFramingNone
 class ServerServices(object):
 
     @request
-    def increment(self, flattened):
-        graph = recreate(flattened)
+    def increment(self, graph_flat):
+        graph = recreate(graph_flat)
         root = graph['root']
         self.increment_rec(root)
-        flattened = flatten(root, {})
-        return flattened
+        graph_flat = flatten(root, {})
+        return graph_flat
 
     def increment_rec(self, graph):
         graph.val += 1
-        for c in graph.children:
-            self.increment_rec(c)
+        for child in graph.children:
+            self.increment_rec(child)
         return graph
 
 

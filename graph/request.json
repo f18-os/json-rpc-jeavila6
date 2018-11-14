@@ -1,0 +1,3 @@
+{"id":1,"jsonrpc":"2.0","method":"increment","params":[{"node1":{"children":[],"value":0},"node2":{"children":["node4","node5","node5"],"val
+ue":0},"node3":{"children":["node7","node7"],"value":0},"node4":{"children":[],"value":0},"node5":{"children":["node6"],"value":0},"node6":{
+"children":[],"value":0},"node7":{"children":[],"value":0},"root":{"children":["node1","node2","node2","node3"],"value":0}}]}
